@@ -1,0 +1,32 @@
+# To install:
+# curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
+# bash Mambaforge-$(uname)-$(uname -m).sh
+#   $ mamba env create -f environment.yml
+#   $ conda activate <name>
+name: machinelearnear-dev
+channels:
+  - pytorch
+  # - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - cython>=3.0
+  - pip
+  - nb_conda_kernels
+  - ipykernel
+  - ipywidgets
+  - gh
+  - ffmpeg
+  - libsndfile
+  - pytorch # pytorch-cuda-12.1 
+  - torchaudio
+  - pip:
+    - wget
+    - pydub
+    - yt-dlp
+    - gradio
+    - nltk
+    - decord
+    - pytube @ git+https://github.com/oncename/pytube.git
+    - pyannote.audio
+#    - -r requirements.txt
